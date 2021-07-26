@@ -9,6 +9,7 @@ export default class ColorGenerator extends Component {
     this.setState({ selectedColor: color });
   }
 
+  
   render() {
     const colors = [
       'red',
