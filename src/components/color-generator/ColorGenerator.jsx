@@ -10,6 +10,7 @@ export default class ColorGenerator extends Component {
   }
 
   
+  
   render() {
     const colors = [
       'red',
