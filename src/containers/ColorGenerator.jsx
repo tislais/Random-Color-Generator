@@ -4,6 +4,11 @@ import ColorDisplay from '../components/color-display/ColorDisplay';
 const colors = [
   'red',
   'orange', 
+  '#b4d455',
+  'green',
+  'blue',
+  'indigo',
+  'violet'
 ];
 
 export default class ColorGenerator extends Component {
@@ -17,7 +22,7 @@ export default class ColorGenerator extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.selectedColor === this.state.selectedColor) {
-      this.setState({ selectedColor: '#666' });
+      this.setState({ selectedColor: 'url("https://i.dailymail.co.uk/i/pix/2016/03/18/15/324D202500000578-3498922-image-a-33_1458315465874.jpg")' });
     }
   }
   

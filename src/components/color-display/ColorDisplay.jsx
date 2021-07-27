@@ -6,7 +6,7 @@ const ColorDisplay = ({ backgroundColor }) => {
     <>
       <div className="color-block"
         style={{
-          backgroundColor
+          background: backgroundColor
         }}>beans.</div>
     </>
   );
