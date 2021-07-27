@@ -4,11 +4,6 @@ import ColorDisplay from '../components/color-display/ColorDisplay';
 const colors = [
   'red',
   'orange', 
-  'yellow', 
-  'green', 
-  'blue', 
-  'indigo', 
-  'violet'
 ];
 
 export default class ColorGenerator extends Component {
@@ -20,10 +15,16 @@ export default class ColorGenerator extends Component {
     this.makeTimer();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.selectedColor === this.state.selectedColor) {
+      this.setState({ selectedColor: '#666' });
+    }
+  }
+
   makeTimer(){
     setInterval(() => {
-      this.setState({ 
-        selectedColor: colors[Math.floor(Math.random() * colors.length)] });
+      const random = colors[Math.floor(Math.random() * colors.length)];
+      this.setState({ selectedColor: random });
     }, 1000);
   }
 

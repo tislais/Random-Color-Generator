@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 const ColorDisplay = ({ backgroundColor }) => {
   return (
     <>
-      <div 
+      <div className="color-block"
         style={{
-          backgroundColor,
-          width: '100px',
-          height: '100px'
-        }}>hi</div>
+          backgroundColor
+        }}>beans.</div>
     </>
   );
 };
