@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorGenerator from '../color-generator/ColorGenerator';
+import ColorGenerator from '../../containers/ColorGenerator';
 
 export default function App() {
   return <ColorGenerator />;

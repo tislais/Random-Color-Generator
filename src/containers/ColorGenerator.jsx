@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ColorDisplay from '../components/color-display/ColorDisplay';
 
 export default class ColorGenerator extends Component {
   state = {
@@ -8,9 +9,8 @@ export default class ColorGenerator extends Component {
   handleColorChange = color => {
     this.setState({ selectedColor: color });
   }
+  
 
-  
-  
   render() {
     const colors = [
       'red',
@@ -22,11 +22,7 @@ export default class ColorGenerator extends Component {
       'violet'
     ];
     return (
-      <>
-        {colors.map((color) => (
-          <div key={color}>{color}</div>
-        ))}
-      </>
+      <ColorDisplay backgroundColor={this.state.selectedColor} />
     );
   }
 }
