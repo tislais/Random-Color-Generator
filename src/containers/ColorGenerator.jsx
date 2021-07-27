@@ -20,6 +20,7 @@ export default class ColorGenerator extends Component {
       this.setState({ selectedColor: '#666' });
     }
   }
+  
 
   makeTimer(){
     setInterval(() => {
