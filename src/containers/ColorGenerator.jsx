@@ -10,8 +10,7 @@ export default class ColorGenerator extends Component {
     this.setState({ selectedColor: color });
   }
   
-
-  render() {
+  componentDidMount() {
     const colors = [
       'red',
       'orange', 
@@ -21,6 +20,13 @@ export default class ColorGenerator extends Component {
       'indigo', 
       'violet'
     ];
+
+    this.setState({ selectedColor: 
+      colors[Math.floor(Math.random() * colors.length)] });
+
+  }
+
+  render() {
     return (
       <ColorDisplay backgroundColor={this.state.selectedColor} />
     );
